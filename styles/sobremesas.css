@@ -624,6 +624,18 @@ a {
 
 @media only screen and (max-width: 700px) {
 
+    .info-close {
+        position: absolute;
+        top: 0;
+        right:0px;
+        cursor: pointer;
+    }
+
+    .container-info {
+        width: 23rem;
+        height: 30rem;
+    }
+
     .nav-desktop {
         display: none;
     }
