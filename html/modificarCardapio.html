@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/modificarCardapio.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+    <title>Modificar Cardapío</title>
+</head>
+
+<body class="body">
+
+    <div class="loader">
+        <div class="circle c1">
+            <div class="inside"></div>
+        </div>
+        <div class="circle c2">
+            <div class="inside"></div>
+        </div>
+    </div>
+
+
+
+    <a href="../index.html">
+        <div class="back">Voltar</div>
+    </a>
+
+
+
+    <section class="section">
+
+        <h1>Modificar Cardapío</h1>
+
+        <div class="container-main"></div>
+
+    </section>
+
+
+    <div class="container-delete">
+        <div class="contant-delete">
+            <span>Tem certeza que deseja apagar este item?</span>
+            <div class="buttons">
+                <button onclick="removerItemConfirm()" class="btn-del">Apagar</button>
+                <button onclick="closeOptionDelete()" class="btn-can">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script src="../scripts/loader.js"> </script>
+    <script src="../scripts/modificarCardapio.js"> </script>
+
+
+</body>
+
+</html>

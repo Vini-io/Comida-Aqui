@@ -1,0 +1,82 @@
+.loader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ee2f2f;
+    z-index: 1000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+}
+
+.hidden-loader{
+    overflow: inherit;
+    opacity: 0;
+}
+.over-hidden-scroll{
+    overflow: hidden;
+}
+
+
+
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: none;
+    border-radius: 100%;
+    border: 10px solid rgb(255, 255, 255);
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+
+}
+
+
+
+.c1 {
+    animation: c1 2s infinite reverse linear;
+    margin-right: 90px;
+}
+
+.c2 {
+    animation: c1 2s infinite reverse linear;
+    animation-delay: -1s;
+
+}
+
+.inside {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #fff;
+    animation: cor 2s infinite alternate-reverse linear;
+
+}
+@keyframes cor {
+    0% {
+        box-shadow: 0 0 20px rgb(225, 255, 0);
+
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgb(251, 0, 255);
+        
+    
+    }
+}
+
+
+@keyframes c1 {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}

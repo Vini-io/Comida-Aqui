@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,600;1,400;1,600&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg-color: #F74230;
+    --text-black: #000;
+    --size-title: 2.5rem;
+    --shadow-low: 0 0 10px rgba(0, 0, 0, 0.2);
+    --shadow-hight: 0 0 10px #000;
+    --radius: 30px;
+}
+
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+
+}
+
+.back {
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.312);
+    color: #fff;
+    padding: 10px;
+    border-radius: var(--radius);
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.back:hover {
+    color: #000;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: var(--shadow-low);
+}
+
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-main {
+    overflow-y: auto;
+    width: 80%;
+    height: 80%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-low);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.container-item {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+    padding: 8px;
+    display: flex;
+
+
+}
+
+.img {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hight);
+}
+
+
+
+
+
+.contant-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 15px;
+    width: 30%;
+    height: 100%;
+
+}
+
+.name {
+    font-size: var(--size-title);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.312);
+}
+
+
+
+
+.contant-modification {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.delete {
+    background-color: red;
+    padding: 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.featured {
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete:hover,
+.featured:hover {
+    transition: 0.2s;
+    color: #000;
+}
+
+
+
+.delete-featured {
+    background-color: royalblue;
+    color: rgb(104, 0, 0);
+    padding: 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete-featured:hover {
+    color: #F74230;
+}
+
+
+
+
+
+
+.container-delete {
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contant-delete {
+    width: 32rem;
+    height: 23rem;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+.buttons>button {
+    border: 0;
+    padding: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin: 4px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.buttons>button:hover {
+    color: #000;
+}
+
+.btn-del {
+    background-color: red;
+}
+
+.btn-can {
+    background-color: royalblue;
+}
+
+
+@media only screen and (max-width: 730px) {
+
+
+    .container-main {
+        width: 95%;
+        height: 80%;
+        padding: 30px;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+
+    h1 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2.3rem;
+        color: #fff;
+        margin-bottom: 30px;
+        text-shadow: var(--shadow-low);
+    }
+
+    .featured,
+    .delete-featured,
+    .delete {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+    .featured,
+    .delete-featured,
+    .delete {
+        font-size: 0.7rem;
+    }
+    .container-main {
+        width: 95%;
+        height: 80%;
+        padding: 10px;
+    }
+    .delete-featured, .featured, .delete {
+        padding: 5px;
+    }
+    .name {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+    .name {
+        font-size: 0.8rem;
+    }
+    .delete-featured, .featured, .delete {
+        font-size: 0.6rem;
+        padding: 8px;
+
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    h1{
+        font-size: 1rem;
+    }
+}

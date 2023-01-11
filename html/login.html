@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+
+    <title>Login</title>
+</head>
+
+<body class="body">
+
+    <div class="loader">
+        <div class="circle c1">
+            <div class="inside"></div>
+        </div>
+        <div class="circle c2">
+            <div class="inside"></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="container-email">
+            <input class="email" type="text" placeholder="Email">
+            <div class="EmailNoSuscess">Email não cadastrado.</div>
+            <div class="EmailNoFormat">O endereço de e-mail está mal formatado.</div>
+        </div>
+
+        <div class="jointLogin">
+
+            <input class="input-senha senha" type="password" placeholder="Senha">
+
+            <div class="showPassword">
+                <img class="showpass" src="../assets/login/showPassword/show.png" width="30px">
+                <img class="closepass" src="../assets/login/showPassword/close.png" width="30px">
+            </div>
+
+            <div class="errorPassword">A senha está inválida.</div>
+
+
+
+        </div>
+
+        <button onclick="loginaccont()" class="btn">Entrar</button>
+
+    </div>
+
+
+
+    <script>
+
+        //Mostrar e ocultar senha de login
+
+        let showpassword = document.querySelector(".showPassword").addEventListener("click", () => {
+
+            let senha = document.querySelector(".input-senha")
+            let imgshow = document.querySelector(".showpass")
+            let imgclose = document.querySelector(".closepass")
+
+            if (senha.type == "password") {
+
+                imgshow.style.display = "none"
+                imgclose.style.display = "inherit"
+                senha.type = "text";
+
+            } else {
+                senha.type = "password"
+                imgshow.style.display = "inherit"
+                imgclose.style.display = "none"
+            }
+
+
+        })
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script src="../scripts/loader.js"> </script>
+    <script src="../scripts/Login.js"> </script>
+</body>
+
+</html>

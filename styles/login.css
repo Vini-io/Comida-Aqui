@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,600;1,400;1,600&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: linear-gradient(to top right,#FF1700, #ff4c4c ); */
+    background-image: url("../assets/login/loggedout/wave-haikei.svg");
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 60px black;
+    color: #fff;
+
+}
+
+input {
+    background: none;
+    border: 0;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding: 9px;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+
+
+.closepass {
+    display: none;
+}
+
+.remember {
+    margin-top: 10px;
+}
+
+.showPassword {
+    position: absolute;
+    cursor: pointer;
+    top: 229px;
+    right: 70px;
+    width: 30px;
+    height: 30px;
+}
+
+
+.btn {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0 0 10px #ff4c4c;
+    padding: 10px;
+    border: 0;
+    background-color: #ff4c4c;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    width: 120px;
+    color: black;
+}
+
+/* code error email não encontrado */
+
+.EmailNoSuscess,
+.EmailNoFormat {
+    position: absolute;
+    top: 135px;
+    left: 110px;
+    font-size: 0.7rem;
+    color: red;
+    display: none;
+}
+
+/* error de senha inválida */
+
+.errorPassword {
+    position: absolute;
+    top: 272px;
+    left: 110px;
+    font-size: 0.7rem;
+    color: red;
+    display: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+   
+    .container {
+        position: relative;
+        width: 40rem;
+        height: 100vh;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .showPassword {
+        position: relative;
+        cursor: pointer;
+        top: -35px;
+        right: -190px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .EmailNoSuscess,
+    .EmailNoFormat {
+        position: relative;
+        top: 8px;
+        left: 0;
+        font-size: 0.7rem;
+        color: red;
+        display: none;
+    }
+
+    .errorPassword {
+        position: relative;
+        top: -20px;
+        left: 0px;
+        font-size: 0.7rem;
+        color: red;
+        display: none;
+    }
+}

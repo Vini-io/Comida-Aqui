@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+
+    <title>SignUp</title>
+</head>
+
+<body class="body">
+
+    <div class="loader">
+        <div class="circle c1">
+            <div class="inside"></div>
+        </div>
+        <div class="circle c2">
+            <div class="inside"></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+
+        <input class="usuario" type="text" maxlength="15" placeholder="Usuário">
+        <div>
+            <input class="email" type="text" placeholder="Email">
+            <div class="texterroEmail">E-mail está formatado incorretamente.</div>
+        </div>
+
+        <div class="jointLogin">
+
+            <input class="input-senha senha" type="password" placeholder="Senha">
+            <div class="texterroPassword">A senha deve ter pelo menos 6 caracteres.</div>
+            <input class="input-confirmar confirmar" type="password" placeholder="Confirmar">
+            <div class="textErroConfirmar">Senha diferente.</div>
+        </div>
+
+        <div class="showPassword">
+            <img class="showpass" src="../assets/login/showPassword/show.png" width="30px">
+            <img class="closepass" src="../assets/login/showPassword/close.png" width="30px">
+        </div>
+
+        <button onclick="createAccont()" class="btn">Cadastrar</button>
+
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script src="../scripts/loader.js"> </script>
+    <script src="../scripts/SignUp.js"> </script>
+
+</body>
+
+</html>

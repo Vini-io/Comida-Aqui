@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/conta.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+
+    <title>Conta</title>
+</head>
+
+<body class="body">
+
+    <div class="loader">
+        <div class="circle c1">
+            <div class="inside"></div>
+        </div>
+        <div class="circle c2">
+            <div class="inside"></div>
+        </div>
+    </div>
+
+
+    <div class="adress-body">
+        <div class="adress-contant">
+            <img class="close-adress" src="../assets/info/button-close.png">
+            <div class="contant-all">
+                <span class="title">Cidade</span>
+                <input class="city" type="text">
+            </div>
+
+            <div class="contant-all">
+                <span class="title">Bairro</span>
+                <input class="district" type="text">
+            </div>
+
+            <div class="contant-all">
+                <span class="title">Rua</span>
+                <input class="Street" type="text">
+            </div>
+
+            <button class="btn-confirm">Confirmar</button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <a href="../index.html"><button class="btn-voltar">VOLTAR</button></a>
+
+    <div class="container-account">
+
+
+        <div class="container-user">
+            <div class="contant-user">
+                <img src="../assets/conta/user.png">
+                <span class="name-user user-text"></span>
+            </div>
+            <div class="contant-user">
+                <img src="../assets/conta/email.png">
+                <span class="email-user user-text"></span>
+            </div>
+            <div class="contant-user">
+                <img src="../assets/conta/location.png">
+                <span class="user-text">Endereço</span>
+            </div>
+        </div>
+
+        <div class="container-address">
+            <span>Cidade: <span class="address-city"></span></span>
+            <span>Bairro: <span class="address-district"></span></span>
+            <span>Rua: <span class="address-street"></span></span>
+            <button class="btn-edit">Editar</button>
+        </div>
+
+
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script src="../scripts/loader.js"> </script>
+    <script src="../scripts/conta.js"> </script>
+
+</body>
+
+</html>
