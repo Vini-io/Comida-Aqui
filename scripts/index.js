@@ -16,22 +16,21 @@ var total = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    if(userId != '')
-    setTimeout(() => {
-        db.collection("sacola").doc(userId).get().then(doc => {
-            db.collection("sacola").doc("ItemSacola").get().then(snap => {
-                let arrayTotal = snap.data()[userId];
-                let tempTotal = 0;
-                for (let i = 0; i < arrayTotal.length; i++) {
-                    tempTotal = tempTotal + parseFloat(doc.data()['' + arrayTotal[i] + ''].preco)
-                }
-                total = tempTotal.toFixed(2);
-                placeTotal.innerHTML = total;
-                placeTotalMobile.innerHTML = total;
+        setTimeout(() => {
+            db.collection("sacola").doc(userId).get().then(doc => {
+                db.collection("sacola").doc("ItemSacola").get().then(snap => {
+                    let arrayTotal = snap.data()[userId];
+                    let tempTotal = 0;
+                    for (let i = 0; i < arrayTotal.length; i++) {
+                        tempTotal = tempTotal + parseFloat(doc.data()['' + arrayTotal[i] + ''].preco)
+                    }
+                    total = tempTotal.toFixed(2);
+                    placeTotal.innerHTML = total;
+                    placeTotalMobile.innerHTML = total;
 
+                })
             })
-        })
-    }, 800);
+        }, 800);
 })
 
 
@@ -193,7 +192,7 @@ function addsacola(collect, id, price, nome) {
         let errorSacolaLogin = document.querySelector(".error-sacola-login");
         errorSacolaLogin.style.display = "flex";
         body.add("hidden-scroll-error")
-        
+
     }
 }
 
