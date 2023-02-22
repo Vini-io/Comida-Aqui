@@ -40,14 +40,14 @@ function createAccont() {
 
         texterrodifferent.style.display = "none";
         auth.createUserWithEmailAndPassword(email, password).then(doc => {
-
+            console.log(doc.user.uid)
             db.collection("user").doc(doc.user.uid).set({
                 usuario: usuario
-            }).then().catch(error => {
+            }).then(() => {
+                location.href = '../index.html'
+            }).catch(error => {
                 console.log(error)
             })
-
-            open('../index.html')
 
         }).catch(error => {
             console.log(error)
@@ -77,9 +77,9 @@ let confirmar = document.querySelector(".input-confirmar")
 let imgshow = document.querySelector(".showpass")
 let imgclose = document.querySelector(".closepass")
 
-showpassword.addEventListener("click", ()=>{
+showpassword.addEventListener("click", () => {
 
-    if(senha.type == "password"){
+    if (senha.type == "password") {
 
         imgshow.style.display = "none"
         imgclose.style.display = "inherit"
@@ -87,7 +87,7 @@ showpassword.addEventListener("click", ()=>{
         confirmar.type = "text";
 
 
-    }else{
+    } else {
         senha.type = "password"
         confirmar.type = "password"
 

@@ -36,7 +36,7 @@ function loginaccont() {
 
 
     auth.signInWithEmailAndPassword(email, password).then(user => {
-        open('../index.html')
+        location.href = '../index.html'
     }).catch(error => {
         console.log(error)
         if (error.code == "auth/user-not-found") {
@@ -63,7 +63,6 @@ auth.onAuthStateChanged((user) => {
             tableLoginModufy(0, user.uid);
         }
     } else {
-        // console.log("Ninguem logado")
         tableLoginModufy(1);
     }
 })
@@ -78,6 +77,7 @@ function tableLoginModufy(x, user) {
 
     if (x == 0) {
         db.collection("user").doc(user).get().then(doc => {
+
             let username = doc.data().usuario
             containerLogin.innerHTML = `
         <div class="connected">

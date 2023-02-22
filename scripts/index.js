@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 })
             })
-        }, 800);
+        }, 1000);
 })
 
 
@@ -200,7 +200,7 @@ function addsacola(collect, id, price, nome) {
 setTimeout(() => {
     if (userId != '')
         db.collection("sacola").doc(userId).onSnapshot(doc => {
-
+            console.log("OnSnapshot")
             var map = doc.data();
             var contantSacola = document.querySelector(".contant-sacola")
             var contantSacolaMobile = document.querySelector(".contant-sacola-mobile")
@@ -208,7 +208,7 @@ setTimeout(() => {
 
             contantSacola.innerHTML = '';
             contantSacolaMobile.innerHTML = '';
-            setTimeout(() => {
+            
                 db.collection("sacola").doc("ItemSacola").get().then(snap => {
 
                     let arrayId = snap.data()[userId];
@@ -266,10 +266,10 @@ setTimeout(() => {
                 })
 
 
-            }, 100);
+            
 
         })
-}, 1000);
+}, 1200);
 
 
 function removeSacola(id) {

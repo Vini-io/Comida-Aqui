@@ -48,13 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let street = document.querySelector(".address-street")
 
     setTimeout(() => {
-        db.collection("user").doc(userId).get().then(snapshot=>{
+        db.collection("user").doc(userId).get().then(snapshot => {
             city.innerHTML = snapshot.data().cidade;
             district.innerHTML = snapshot.data().bairro;
             street.innerHTML = snapshot.data().rua;
         })
     }, 800);
-    
+
 })
 
 
@@ -75,13 +75,15 @@ let btnConfirm = document.querySelector(".btn-confirm").addEventListener("click"
     let city = document.querySelector(".city").value;
     let district = document.querySelector(".district").value;
     let Street = document.querySelector(".Street").value;
+    console.log(city)
 
     db.collection("user").doc(userId).set({
         cidade: city,
         bairro: district,
         rua: Street
-    }, { merge: true })
-    document.location.reload()
+    }, { merge: true }).then(() => {
+        document.location.reload()
+    })
 
 })
 
